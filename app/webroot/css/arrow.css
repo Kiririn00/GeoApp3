@@ -1,0 +1,15 @@
+a.arrow{
+	position: relative;
+}
+a.arrow::after{
+content: "";
+display: block;
+width: 15px;
+height: 15px;
+border-top: 1px solid #817F7F;
+border-right: 1px solid #817F7F;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+margin-top: 15px;
+}
+}

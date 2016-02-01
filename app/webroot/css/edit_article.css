@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+#edit_article_container{
+	text-align: center;
+}
+input[type=text]{
+	font-size: 100%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+textarea{
+	font-size: 70%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+input[type=submit]{
+	background-color: #444242;
+	border: solid 1px #fff;
+	border-radius: 2px;
+	color: whitesmoke;
+	margin-top: 22px;
+	clear: both;
+	width: 80%;
+	height: 8%;
+	font-size: 21pt;
+	}
+#line{
+	width: 75%;
+    height: 1px;
+    background-color: #817F7F;
+    margin-top:13px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+#AddField{
+	color: white;
+	text-decoration: blink;
+	font-weight: lighter;
+}
+	#addfield_cover{
+		background-color: #444242;
+		width: 25%;
+		margin: auto;
+
+	}
+#article_image{
+	max-width: 200px;
+	max-height: 200px;
+}	

@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+
+#article_image{
+max-height:120px;
+max-width:200px;
+border-radius: 20px;
+}
+#menu_button_container{
+	
+}
+#menu_button{
+	margin-left: 10%;
+}
+#concept{
+	width: 90%;
+	height:300px;
+	margin: auto;
+	background-color: rgba(256, 256, 256,0.7);
+}
+#topic{
+	//margin-left:6% !important;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 11px;
+}
+#detail{
+	font-size: 14pt;
+	padding: 0px 40px 40px 40px;	
+}
+
+#search{
+	margin: auto;
+	width: 100%;
+	margin-top: -83px;
+	//background-color: rgba(256, 256, 256,0.7);
+}
+#search_container{
+	width: 92%;
+	margin: auto;
+
+}
+#search_button{
+	background-color: #444242;
+	border: solid 1px #444242;
+	border-radius: 2px;
+	color: whitesmoke;
+	//margin-top: 22px;
+	clear: both;
+	width: 30%;
+	height: 61px;
+	font-size: 21pt;
+}
+#article_container{
+	width: 96%;
+	margin: auto;
+	//background-color: #eee;
+	padding: 17px;
+	font-family: Simplifica;
+}
+	#article_content{
+		/float:left;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		background-color: white;
+		margin-top: 25px;
+		padding: 10px 0px 10px 10px;
+		height: 140px;
+	}
+		#article_image_content{
+			margin-left: 10px;
+			float: left;
+
+		}
+#article_anime{
+	font-size: 15pt;
+	font-family: FlopDesignFONT;
+}
+#article_line{
+	height: 55px;
+	background-color: #444242;
+	width:80%;
+	color: white;
+	text-align: center;
+	font-size: 30pt;
+	letter-spacing: 3; 
+}
+#slide_line{
+	height: 55px;
+	background-color: #444242;
+	width:80%;
+	color: white;
+	text-align: center;
+	font-size: 30pt;
+	letter-spacing: 3;
+	margin-bottom:38px; 
+}
+#header_line{
+	width: 100%;
+	height: 1px;
+	background-color: #817F7F;
+	margin-top:13px;	
+}
+#article_topic{
+	font-size: 20pt;
+	color: #00a4e8;
+	font-family: FlopDesignFONT;
+}
+#comment_amount_line{
+	height: 35px;
+	background-color: #444242;
+	width: 32%;
+	color: white;
+	font-size: 19pt;
+	letter-spacing: 3;
+	float: right;
+	margin-top: 23px;
+	padding: 4 10;
+}
+	#comment_amount{
+		float: right;
+	}
+	#comment_jp{
+		font-size: 10pt;
+	}
+#article_date{
+	font-size: 10pt;
+	height: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

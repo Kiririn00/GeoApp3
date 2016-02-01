@@ -1,0 +1,37 @@
+input[type=submit]{
+	background-color: #444242;
+	border: solid 1px #fff;
+	border-radius: 2px;
+	color: whitesmoke;
+	margin-top: 22px;
+	clear: both;
+	width: 25%;
+	height: 7%;
+	font-size: 21pt;
+}
+
+input[type=text]{
+	font-size: 100%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+#search_location_container{
+	text-align: center;
+}
+#map-canvas{
+	width:100%;
+	height: 80%;
+}
+#pac-input{
+	width: 60%;
+	height: 65px;
+	font-size: 18pt;
+}
+#topic{
+	font-size: 30pt;
+}
+#search_location_container{
+	text-align: center;
+}

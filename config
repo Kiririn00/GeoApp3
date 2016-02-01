@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "varit"]
+	url = https://github.com/Kiririn00/GeoApp2.git
+	fetch = +refs/heads/*:refs/remotes/varit/*
+[branch "master"]
+	remote = varit
+	merge = refs/heads/master

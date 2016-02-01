@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+img{
+	max-width: 200px;
+	max-height: 200px;
+}
+#search_container{
+}
+#search_result_container
+{
+	width: 96%;
+	margin: auto;
+	//background-color: #eee;
+	padding: 17px;
+	font-family: Simplifica;
+}
+#search_result_content{
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		background-color: white;
+		margin-top: 25px;
+		padding: 10px 0px 10px 10px;
+		height: 140px;
+}
+#search_result_image{
+	float: left;
+	height: 120px;
+}
+#article_image{
+	border-radius: 25px;
+}
+#comment_amount_line{
+	height: 35px;
+	background-color: #444242;
+	width: 32%;
+	color: white;
+	font-size: 19pt;
+	letter-spacing: 3;
+	float: right;
+	margin-top: 23px;
+	padding: 4 10;
+}
+#article_anime{
+	font-size: 15pt;
+}
+#article_date{
+	font-size: 10pt;
+	height: 1px;
+}

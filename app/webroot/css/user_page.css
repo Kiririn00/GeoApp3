@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+img{
+	max-width: 200px;
+	max-height: 200px;
+}
+#user_page_container{
+	text-align: center;
+	//margin-top: 155px;
+}
+#topic{
+	text-align: center;
+}
+#topic_mypage{
+height: 55px;
+background-color: #444242;
+width: 80%;
+color: white;
+text-align: center;
+font-size: 30pt;
+letter-spacing: 3;
+}
+#profile_setting{
+}
+#topic_pen_name{
+height: 39px;
+background-color: #444242;
+width: 45%;
+color: white;
+text-align: center;
+font-size: 18pt;
+letter-spacing: 3;
+margin-top: 26px;
+}
+#topic_profile_setting{
+height: 39px;
+background-color: #444242;
+width: 45%;
+color: white;
+text-align: center;
+font-size: 18pt;
+letter-spacing: 3;
+margin-top: 26px;	
+}

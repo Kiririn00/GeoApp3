@@ -1,0 +1,41 @@
+
+
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+section.container{
+
+}
+  label{display: none;}
+  input.search_bar{
+    float: left;
+    border: none; outline: none;
+    width: 70%;
+    //border-radius: 55px;
+    margin: 0 auto;
+    font-size: 15pt; color: #0d2840;
+    padding: 19px 70px 19px 31px;
+    -webkit-transition: all .3s cubic-bezier(0,0,.5,1.5);
+    transition: all .3s cubic-bezier(0,0,.5,1.5);
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+    box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+    background: rgb(255, 255, 255) url(http://i.imgur.com/seveWIw.png) no-repeat center center;
+    background-position: calc(100% - 35px) center
+  }
+  
+  /* animation*/
+ //input.search_bar:focus{width: 100%; background-position: -webkit-calc(100% - 35px) center; background-position: calc(100% - 35px) center}
+
+  /*Removes default x in search fields (webkit only i guess)*/
+  input[type=search]::-webkit-search-cancel-button{-webkit-appearance: none;}
+  /*Changes the color of the placeholder*/
+  ::-webkit-input-placeholder{color: #0d2840; opacity: .5;}
+  :-moz-placeholder{color: #0d2840; opacity: .5;}
+  ::-moz-placeholder{color: #0d2840; opacity: .5;}
+  :-ms-input-placeholder{color: #0d2840; opacity: .5;}
+  */

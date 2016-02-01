@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+input[type=submit]{
+	background-color: #444242;
+	border: solid 1px #fff;
+	border-radius: 2px;
+	color: whitesmoke;
+	margin-top: 22px;
+	clear: both;
+	width: 25%;
+	height: 7%;
+	font-size: 21pt;
+}
+#select_location_containter{
+	text-align: center;
+}
+#line{
+	width: 60%;
+    height: 1px;
+    background-color: #817F7F;
+    margin-top:13px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 9px;
+	margin-bottom: 9px;
+}

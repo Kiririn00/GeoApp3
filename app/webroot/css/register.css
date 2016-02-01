@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+input[type=text]{
+	font-size: 100%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+input[type=password]{
+	font-size: 100%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+textarea{
+	font-size: 70%;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #959391;
+	background: #FFF;
+}
+input[type=submit]{
+	background-color: #444242;
+	border: solid 1px #fff;
+	border-radius: 2px;
+	color: whitesmoke;
+	margin-top: 22px;
+	clear: both;
+	width: 80%;
+	height: 8%;
+	font-size: 21pt;
+	}
+#display{
+	max-width: 200px;
+	max-height: 200px;
+}	
+#register_container{
+	text-align: center;
+}
