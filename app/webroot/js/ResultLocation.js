@@ -24,54 +24,14 @@ var longitude;
 var latlng = [];
 var info_content = [];
 
-
-function init(UseArticleId,count){
-console.log('ArticleId: '+UseArticleId);
-console.log('Number of Location: '+count);
-	
-	$.getJSON("/geoapp/Article/Show.json", function(data){
-		
-		$.each(data.LocationJSON, function(key,value) {
-			LocationId = value.Location.location_id;  
-			Latitude = value.Location.latitude;
-			Longitude = value.Location.longitude;
-					
-		});//end each function
-				
-		$.each(data.ArticleLocationJSON, function(key,value) {
-		
-			ArticleId = value.ArticleLocation.article_id;
-			ArticleDetail = value.ArticleLocation.detail;
-			Lat = value.ArticleLocation.latitude;
-			Long = value.ArticleLocation.longitude;
-			LocationMemo = value.ArticleLocation.article_location_name;
-			
-			if(ArticleId == UseArticleId)
-			{
-				UseLat[i] = Lat;
-				UseLong[i] = Long;
-				UseLocationMemo[i] = LocationMemo;
-				UseArticleDetail[i] = ArticleDetail;
-				i++;
-			}
-					
-		});//end each function
-				
-		//console.dir(UseLat);
-		UseCount = count;
-		initialize(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail);
-			
-	});//end getJSON function
-		
-}//end function
-
-
-function initialize(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail) {
+//callback function
+function send_init(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail){
+//initialize(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail);
 
 	 // Try HTML5 geolocation
 	if(navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(function(position) {
-	var pos = new google.maps.LatLng( UseLat[0],UseLong[0]);
+	var pos = new google.maps.LatLng(UseLat[0],UseLong[0]);
 
 	map.setCenter(pos);
 	latitude = UseLat[0];
@@ -107,12 +67,59 @@ function initialize(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail) {
 		attachSecretMessage(marker, i,UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail,info_content);
 			
 	}//end loop
-  	    
 
+
+}//end send init
+
+function init(UseArticleId,count){
+console.log('ArticleId: '+UseArticleId);
+console.log('Number of Location: '+count);
+	
+
+	$.getJSON("/geoapp/Article/Show.json", function(data){
+		
+		$.each(data.LocationJSON, function(key,value) {
+			LocationId = value.Location.location_id;  
+			Latitude = value.Location.latitude;
+			Longitude = value.Location.longitude;
+					
+		});//end each function
+				
+		$.each(data.ArticleLocationJSON, function(key,value) {
+		
+			ArticleId = value.ArticleLocation.article_id;
+			ArticleDetail = value.ArticleLocation.detail;
+			Lat = value.ArticleLocation.latitude;
+			Long = value.ArticleLocation.longitude;
+			LocationMemo = value.ArticleLocation.article_location_name;
+			
+			if(ArticleId == UseArticleId)
+			{
+				UseLat[i] = Lat;
+				UseLong[i] = Long;
+				UseLocationMemo[i] = LocationMemo;
+				UseArticleDetail[i] = ArticleDetail;
+				i++;
+			}
+					
+		});//end each function
+				
+		//console.dir(UseLat);
+		UseCount = count;
+		send_init(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail);
+		
+			
+	});//end getJSON function
+		
+}//end function
+
+
+function initialize(UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail) {
+
+
+  	   
 }//end get current position
  
-
-
 	
 function attachSecretMessage(marker,num,UseLat,UseLong,UseCount,UseLocationMemo,UseArticleDetail,info_content){
 

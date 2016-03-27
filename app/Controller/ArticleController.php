@@ -110,8 +110,9 @@ class ArticleController extends AppController{
 	}
 	
 	public function NewArticle(){
-		
+		//read session of user id
 		$UserId = $this->Session->read('UserId');
+		//if user id session is null that mean user still not login yes. So redirect to login page with error message
 		if($UserId == null){
 			
 			$error_meage = 'Session time out please login again';
@@ -121,7 +122,7 @@ class ArticleController extends AppController{
 			));
 			
 		}
-		
+		//set user id to view
 		$this->set('UserId',$UserId);
 		
 		//set Location all data by UserId
@@ -134,19 +135,16 @@ class ArticleController extends AppController{
 			'conditions' => array('Location.user_id' => $UserId)
 		)));
 		
+		//if submit form (get post data)
 		if($this->request->is('post'))
 		{
 
-			//------------------- this is for save to Article and Anime Model  -----------------------------------//
+			//------------------- this is for save to Article Model  -----------------------------------//
 			
 			//get post data of Article 
 			$ArticleTitle = $_POST['article_title'];
 			$Summary = $_POST['summary'];
 			
-			
-			//get last id of Anime model
-			$AnimeId = $this->Anime->getLastInsertId();
-
 			//insert data to Article model
 			$this->Article->create();
 			$this->Article->save(array(
@@ -162,12 +160,12 @@ class ArticleController extends AppController{
 			if($_FILES['ArticleImage']['error'])
 			{
 				//for not show error 
-			}
+			}//end if
 			//save image for Article
 			else
 			{
-				$ArticleFilename = 'img/'.$ArticleId.'_article.jpg';
-				$ImageLink=rename($_FILES['ArticleImage']['tmp_name'],WWW_ROOT.$ArticleFilename);
+				$ArticleFilename = 'img/'.$ArticleId.'_article.jpg';//new image name
+				$ImageLink=rename($_FILES['ArticleImage']['tmp_name'],WWW_ROOT.$ArticleFilename);//rename and save to directory
 				
 				$this->Article->ArticleId = $ArticleId;
 				$this->Article->save(array(
@@ -205,10 +203,8 @@ class ArticleController extends AppController{
 							'article_sound_name' => $ArticleId.'_article.mp3'
 					));
 					
-				}
-				
-				
-			}
+				}//end else				
+			}//end else
 
 			//---------- This is for save to ArticleContent and ArticleContentImage Model----------------------------------//
 			

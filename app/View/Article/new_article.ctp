@@ -57,18 +57,18 @@ echo $this->Html->script('AddRemoveField');
 	<div class="form-group">
 		<label>Upload Location Image</label>
 		<?php 
+		//this form is for upload with out take exif
+		
 			echo $this->Form->input('Article.file', array(
 				'type' => 'file', 'multiple',
 				'name' => 'ArticleImage_0[]',
 				'label' => false
 			)); 
+		
 		?>
-		<input type="file" multiple="multiple" name="imagefile[]" >  
+		<input type="file" multiple="multiple" name="imagefile[]" >
 
 	</div>
-
-
-
 
 	<div id="PasteImageField" class="1"></div>
 

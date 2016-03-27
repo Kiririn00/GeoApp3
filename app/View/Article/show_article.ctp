@@ -78,6 +78,7 @@ $location_number = $i+1;
 <hr />
 
 <!--Show image of location -->
+<?php /*
 <div id="slider">
 	<?php for($l=0;$l<$ArticleContentImageCount;$l++){ ?>
 		
@@ -87,38 +88,9 @@ $location_number = $i+1;
 		    	    
 	<?php } //end for loop by ArticleContentCount ?>
 </div>
+*/?>
 <!-- end div location -->
 
-<!--Show video of location -->
-<div class="row">
-	<div class="col-lg-12">
-		<h3>Video</h3>
-		<div class='embed-responsive embed-responsive-16by9'>
-		<?php 
-		echo $this->Html->media('video/'.$ArticleId.'_article.mp4', array(
-		     'fullBase' => true,
-		     'text' => 'Fallback text',
-
-		)); 
-		?>
-		</div>
-	</div>
-</div>
-
-<!-- Show sound of location -->
-<div class="row">
-	<div class="col-lg-12">
-		<h3>Sound</h3>
-		<?php 
-		echo $this->Html->media('sound/'.$ArticleId.'_article.mp3',array(
-			'fullBase' => true,
-			'type' => 'audio/mpeg',
-			'text' => 'test',
-			'controls' 
-		)); 
-		?>
-	</div>
-</div>
 
 
 <!-- Comment zone  -->
